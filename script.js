@@ -1,8 +1,9 @@
-/*
-//EJERCICIO CLASE 2:
+
 // Consultar sobre la nota promedio del curso a un usuario y con el uso de condicionales evaluar:
 // Si la nota es mayor a 10 o menor a 0 poner un alert de que no es una nota válida.
 // En caso contrario, si la nota es entre el rango de 0 a 10 calificar con su respectiva valoración.
+/*
+
 let nota = 0
 let acum = 0 
 
@@ -62,6 +63,7 @@ let estudiante = prompt("Ingresa el nombre con el cual te registraste para entra
     }
 */
 
+/*
 let promedio = 0;
 let bandera = true;
 while (bandera){
@@ -80,14 +82,39 @@ while (bandera){
   }
 
 }
-
-//como usar para que le pregunten las notas a los alumnos
-/*
-for (let i = 0; i < 5; i++){
-    let nombre= prompt("A nombre de quien será hecha la reserva?)
-    alert(`La mesa numero $(i) será a para $(nombre)` )
-}
 */
 
+// Desafio function
+    
+    function golesJugador (){
 
+    let jugador = prompt("Ingrese el nombre del jugador")
+    let cantPartidos = parseInt(prompt("Ingrese cantidad de partidos jugados"))
+    let suma = 0
 
+    for (i = 0; i<cantPartidos; i++){
+        let goles = parseInt(prompt(`ingrese goles de partido ${i+1}`))
+        suma = suma + goles
+    }
+    let promedio = suma/cantPartidos
+    
+    promedioJugador(promedio, jugador)
+
+    }
+
+    function promedioJugador (promedio,jugador){
+        
+
+        if (promedio >= 8) {
+            alert(`El jugador ${jugador} ha tenido de promedio un ${promedio} y consiguió el ascenso!`)
+    
+        } else if (promedio >= 4) {
+            alert(`El jugador ${jugador} ha tenido de promedio un ${promedio} y está a punto de ser ascendido`);
+        } else {
+            alert(`El jugador ${jugador} ha tenido de promedio un ${promedio} y no consiguió el ascenso`);
+        };
+        return promedio
+    }
+    
+     golesJugador()
+ 

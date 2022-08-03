@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu:wght@300&display=swap");
+/*BARRA DE NAVEGACION*/
+
+.nav-link {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Raleway', sans-serif;
+}
+
+.navbar-brand {
+    margin-left: 100px;
+    font-size: 400px;
+    letter-spacing: 3px;
+    font-family: 'Raleway', sans-serif;
+    color: black; 
+}
+
+.menuNavegacion {
+    margin-right: 95px;
+}
+
+.botones__barraNavegacion {
+    text-decoration: none;
+    color: black;
+}
+
+.botones__barraNavegacion:hover {
+    color: black;
+}
+
+/*SUBMENU*/
+
+.submenu__desplegable {
+    position: absolute;
+    background: 'Raleway', sans-serif;
+    border: none;
+    width: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu__desplegable .barra__submenu .enlace__submenu {
+    display: block;
+    padding: 15px;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu__desplegable {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menuNavegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

@@ -10,15 +10,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family:'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .navbar-brand {
     margin-left: 100px;
-    font-size: 400px;
-    letter-spacing: 3px;
+    font-size: 800px;
+    letter-spacing: 5px;
     font-family: 'Raleway', sans-serif;
-    color: black; 
+    color: black;
 }
 
 .menuNavegacion {
@@ -34,34 +34,47 @@
     color: black;
 }
 
-/*SUBMENU*/
-
-.submenu__desplegable {
-    position: absolute;
-    background: 'Raleway', sans-serif;
-    border: none;
-    width: 150px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1.5s;
-}
-
-.submenu__desplegable .barra__submenu .enlace__submenu {
-    display: block;
-    padding: 15px;
-    color: black;
-    font-family: 'Raleway', sans-serif;
-    text-decoration: none;
-}
-
-.menu li:hover .submenu__desplegable {
-    visibility: visible;
-    opacity: 1;
-}
-
 .menuNavegacion {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+}
+
+.registros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btnIngresar {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btnIngresar:hover {
+    color: rgb(175, 158, 101);
+}
+
+.card {
+    color: rgb(0, 0, 0);
+    width: 200px;
+    height: 400px;
+    margin: 1rem auto;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 2px;
+
+}
+
+.nombreApellido:hover {
+    color: rgb(175, 158, 101);
 }

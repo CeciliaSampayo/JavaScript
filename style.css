@@ -196,3 +196,10 @@ body {
     color: rgb(150, 61, 61)
   }
   
+  .ofertaColor{
+    color: rgb(109, 5, 207);
+  }
+
+  .precioComun{
+    color: black;
+  }

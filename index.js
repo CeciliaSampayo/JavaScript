@@ -7,7 +7,7 @@ function crearProductos() {
       <img class="card__img" src="${producto.img}" alt="${producto.nombre}">
       <h3 class="card__title">${producto.nombre}</h3>
       <p class="card__info">${producto.descripcion}.</p>
-      <p class="card__price">Precio: $ ${producto.precio}</p>
+      <p class="card__price ${producto.precio <= 200.000 ? "ofertaColor" : "precioComun"}">Precio: $ ${producto.precio}</p>
       <button class="card__button" id="button_${producto.id}">Agregar al carrito</button>
   </article>`;
   });
@@ -18,16 +18,25 @@ function muestraCarrito() {
   comprasHtml.innerHTML = ``;
   let totalPrecio = carrito.reduce((acc, el) => acc + el.precio, 0);
   let carritoHtml = document.getElementById("carritoHtml");
-  if (carrito.length > 0)
-    carritoHtml.innerText = "Su carrito contiene los siguientes productos: ";
+
+  //OPERADORES AND
+
+  // if (carrito.length > 0)
+  (carrito.length > 0) && console.log("Su carrito contiene los siguientes productos: ")
+  carritoHtml.innerText = "Su carrito contiene los siguientes productos: ";
+
   let nuevaCompra = document.getElementById("comprasHtml");
   carrito.forEach((productos) => {
     comprasHtml.innerHTML += `<li>${productos.nombre} $ ${productos.precio}</li><p id=quitar_${productos.id} class= quitar_producto> Quitar producto</p> `;
   });
   let totalHtml = document.getElementById("totalHtml");
-  if (carrito.length > 0)
-    totalHtml.innerText = `El total de su compra es de $ ${totalPrecio}`;
-  else totalHtml.innerText = ``;
+
+  //OPERADOR TERNARIO 
+
+  //if (carrito.length > 0)
+  //  totalHtml.innerText = `El total de su compra es de $ ${totalPrecio}`;
+  //else totalHtml.innerText = ``;
+  (carrito.length > 0) ? totalHtml.innerText = `El total de su compra es de $ ${totalPrecio}` : totalHtml.innerText = ``
 }
 
 function compraDeProductos() {
@@ -136,9 +145,9 @@ function finalizarCompra() {
   const compras = carrito.map((el) => el.nombre);
 
   alert(
-    "Usted compro: "  +
+    "Usted compro: " +
     compras +
-    " por el precio final de $ "  +
+    " por el precio final de $ " +
     totalPrecio +
     ".   ¡Muchas gracias! Vuelva pronto."
   );
@@ -173,6 +182,10 @@ const producto1 = new Productos(
   "Montado en oro rosa de 18k con 300 diamantes blancos",
   574.201
 );
+
+//Desestructuracion 
+const {nombre,descripcion,precio} = producto1
+console.log(nombre)
 
 const producto2 = new Productos(
   2,
@@ -210,24 +223,30 @@ const producto5 = new Productos(
 
 const tienda = [producto1, producto2, producto3, producto4, producto5];
 console.log(tienda);
+//Spread
+console.log(...tienda);
 
-const carrito = [];
+//OPERADORES OR Y OPTIMIZACION 
+const carrito = JSON.parse(localStorage.getItem("productos")) || [];
+
 
 ecommerce();
 
 //Storage
 
+
+/*
 let btnDarkMode = document.getElementById("botonDarkMode");
 let btnLighthMode = document.getElementById("botonLightMode");
 
 
-let darkMode 
-if (localStorage.getItem("darkMode")){
-darkMode = localStorage.getItem("darkMode")
-}else{
+let darkMode
+if (localStorage.getItem("darkMode")) {
+  darkMode = localStorage.getItem("darkMode")
+} else {
   localStorage.setItem("darkMode", "light")
 }
-if(darkMode == "dark"){
+if (darkMode == "dark") {
   document.body.classList.add("darkMode")
 }
 btnDarkMode.addEventListener("click", () => {
@@ -238,31 +257,28 @@ btnLighthMode.addEventListener("click", () => {
   document.body.classList.remove("darkMode")
   localStorage.setItem("darkMode", "light")
 
-})
+})*/
 
-//storage array tienda
+//Storage array tienda
 
-if(localStorage.getItem("tienda")){
+if (localStorage.getItem("tienda")) {
   let tienda = JSON.parse(localStorage.getItem("tienda"))
-  
-}else{
+
+} else {
   console.log(`primera vez que carga Tienda`)
-  tienda.push(producto1,producto2,producto3,producto4,producto5)
-  localStorage.setItem("tienda",JSON.stringify(tienda))
+  tienda.push(producto1, producto2, producto3, producto4, producto5)
+  localStorage.setItem("tienda", JSON.stringify(tienda))
 }
 console.log(tienda)
 
 //storage array carrito
-
-if(localStorage.getItem("carrito")){
-  Productos = JSON.parse(localStorage.getItem("carrito"))
-}else{
+/*
+if (localStorage.getItem("carrito")) {
+ carrito = JSON.parse(localStorage.getItem("carrito"))
+} else {
   console.log(`Primera vez que carga Carrito`)
   localStorage.setItem("carrito", [])
-  
+
 }
-
-
-
-
+*/
 

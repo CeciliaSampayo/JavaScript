@@ -1,4 +1,4 @@
-//FUNCIONES//
+//FUNCIONES
 
 function crearProductos() {
   let ecomerceHtml = document.getElementById("productosHtml");
@@ -52,6 +52,7 @@ function compraDeProductos() {
   button_5.onclick = compraProducto5;
 }
 
+
 function quitarProducto() {
   if (carrito.includes(producto1) == true) {
     let quitar_producto1 = document.getElementById("quitar_1");
@@ -77,18 +78,39 @@ function quitarProducto() {
 
 function compraProducto1() {
   carrito.push(producto1);
+  Swal.fire({
+    title:"Producto agregado",
+    text:"DIAMOND CHAIN IN ROSE GOLD",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
 function quitarProducto1() {
   let producto1Posicion = carrito.indexOf(producto1);
   carrito.splice(producto1Posicion, 1);
+  Swal.fire({
+    title:"Producto eliminado",
+    text:"DIAMOND CHAIN IN ROSE GOLD",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
 
 function compraProducto2() {
   carrito.push(producto2);
+  Swal.fire({
+    title:"Producto agregado",
+    text:"SPIKE DIAMOND BRACELET",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
@@ -96,12 +118,26 @@ function compraProducto2() {
 function quitarProducto2() {
   let producto2Posicion = carrito.indexOf(producto2);
   carrito.splice(producto2Posicion, 1);
+  Swal.fire({
+    title:"Producto eliminado",
+    text:"SPIKE DIAMOND BRACELET",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
 
 function compraProducto3() {
   carrito.push(producto3);
+  Swal.fire({
+    title:"Producto agregado",
+    text:"NECKLACE IN ROSE GOLD",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
@@ -109,12 +145,26 @@ function compraProducto3() {
 function quitarProducto3() {
   let producto3Posicion = carrito.indexOf(producto3);
   carrito.splice(producto3Posicion, 1);
+  Swal.fire({
+    title:"Producto eliminado",
+    text:"NECKLACE IN ROSE GOLD",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
 
 function compraProducto4() {
-  carrito.push(producto4);
+  carrito.push(producto4);  
+    Swal.fire({
+    title:"Producto agregado",
+    text:"DIAMOND SPIKE ONE BRACELET",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
@@ -122,12 +172,25 @@ function compraProducto4() {
 function quitarProducto4() {
   let producto4Posicion = carrito.indexOf(producto4);
   carrito.splice(producto4Posicion, 1);
+  Swal.fire({
+    title:"Producto eliminado",
+    text:"DIAMOND SPIKE ONE BRACELET",
+    icon:"success",
+    confirmButtonText:"aceptar",
+  }) 
   muestraCarrito();
   quitarProducto();
 }
 
 function compraProducto5() {
   carrito.push(producto5);
+  Swal.fire({
+    title:"Producto agregado",
+    text:"NECKLACE IN WHITE GOLD FULL",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   muestraCarrito();
   quitarProducto();
 }
@@ -135,6 +198,13 @@ function compraProducto5() {
 function quitarProducto5() {
   let producto5Posicion = carrito.indexOf(producto5);
   carrito.splice(producto5Posicion, 1);
+  Swal.fire({
+    title:"Producto eliminado",
+    text:"NECKLACE IN WHITE GOLD FULL",
+    icon:"success",
+    confirmButtonText:"aceptar"
+   
+  }) 
   console.log(carrito);
   muestraCarrito();
   quitarProducto();

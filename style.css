@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu:wght@300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Fira+Sans&family=Koulen&family=Merriweather:ital@1&family=Montserrat:ital,wght@0,400;1,200;1,400&family=Radio+Canada:ital@1&family=Raleway:wght@300&family=Roboto:wght@300;400&family=Ubuntu:wght@300&display=swap');
 /*BARRA DE NAVEGACION*/
@@ -63,7 +64,7 @@
 .btnIngresar:hover {
     color: rgb(175, 158, 101);
 }
-
+/*
 .card {
     color: rgb(0, 0, 0);
     width: 200px;
@@ -74,7 +75,7 @@
     border: 1px solid white;
     border-radius: 2px;
 
-}
+}*/
 
 .nombreApellido:hover {
     color: rgb(175, 158, 101);
@@ -110,7 +111,7 @@ body {
     justify-content:space-around;
     
   }
-  
+  /*
   .card {
     width: 100%;
     margin: 0.5%;
@@ -121,7 +122,7 @@ body {
     align-items: center;
     padding-bottom: 1.2%;
   }
-  
+  /*
   .card__img {
     width: 100%;
   }
@@ -154,11 +155,12 @@ body {
     background-color: rgb(49, 38, 38);
     color: white;
   }
+  */
   
   .finish_button:hover {
-    background-color:rgb(49, 38, 38);
+    background-color:#488888be ;
+    color: rgb(0, 0, 0);
   }
-  
   .carrito {
     display: flex;
     flex-direction: column;
@@ -178,7 +180,7 @@ body {
   
   ul {
     margin: 2%;
-    list-style-type: circle;
+    list-style-type:none;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,9 +199,32 @@ body {
   }
   
   .ofertaColor{
-    color: rgb(109, 5, 207);
+    color: rgb(0, 69, 160);
   }
 
   .precioComun{
     color: black;
   }
+  
+  .box__productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+  }
+
+.card{
+  display: flex;
+  justify-content: center;
+  box-shadow: 5px 5px 5px rgba(107, 104, 104, 0.507);
+  width: 100%;
+}
+
+.card-title:hover{
+  color:#488888b2 
+}
+
+.card-text{
+  font: "Ubuntu", sans-serif;
+}

@@ -1,15 +1,35 @@
+
+
+
 //FUNCIONES
 
 function crearProductos() {
   let ecomerceHtml = document.getElementById("productosHtml");
   tienda.forEach((producto) => {
-    productosHtml.innerHTML += `<article id="${producto.id}" class="card">
+    productosHtml.innerHTML += /*`<article id="${producto.id}" class="card">
       <img class="card__img" src="${producto.img}" alt="${producto.nombre}">
       <h3 class="card__title">${producto.nombre}</h3>
       <p class="card__info">${producto.descripcion}.</p>
       <p class="card__price ${producto.precio <= 200.000 ? "ofertaColor" : "precioComun"}">Precio: $ ${producto.precio}</p>
       <button class="card__button" id="button_${producto.id}">Agregar al carrito</button>
-  </article>`;
+  </article>`;*/
+
+      ` 
+
+            <div class="col estilo box__productos">
+           <section id="${producto.id}" class="card w-100 box">
+            <img src="${producto.img}" class="card-img-top" alt="${producto.nombre}">
+            <article class="card-body">
+                <h5 class="card-title">${producto.nombre}</h5>
+                <p class="card-text">${producto.descripcion}</p>
+                <article class="card-footer fs-5">
+                    <p class="card__price ${producto.precio <= 200.000 ? "ofertaColor" : "precioComun"}">Precio: ${producto.precio}</p>
+                </article>
+                <button class="btn btn-outline-secondary" id="button_${producto.id}">Agregar al carrito</button>
+            </article>
+        </section>
+    </div>
+    </div> `
   });
 }
 
@@ -79,12 +99,12 @@ function quitarProducto() {
 function compraProducto1() {
   carrito.push(producto1);
   Swal.fire({
-    title:"Producto agregado",
-    text:"DIAMOND CHAIN IN ROSE GOLD",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto agregado",
+    text: "DIAMOND CHAIN IN ROSE GOLD",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -92,12 +112,12 @@ function quitarProducto1() {
   let producto1Posicion = carrito.indexOf(producto1);
   carrito.splice(producto1Posicion, 1);
   Swal.fire({
-    title:"Producto eliminado",
-    text:"DIAMOND CHAIN IN ROSE GOLD",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto eliminado",
+    text: "DIAMOND CHAIN IN ROSE GOLD",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -105,12 +125,12 @@ function quitarProducto1() {
 function compraProducto2() {
   carrito.push(producto2);
   Swal.fire({
-    title:"Producto agregado",
-    text:"SPIKE DIAMOND BRACELET",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto agregado",
+    text: "SPIKE DIAMOND BRACELET",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -119,12 +139,12 @@ function quitarProducto2() {
   let producto2Posicion = carrito.indexOf(producto2);
   carrito.splice(producto2Posicion, 1);
   Swal.fire({
-    title:"Producto eliminado",
-    text:"SPIKE DIAMOND BRACELET",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto eliminado",
+    text: "SPIKE DIAMOND BRACELET",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -132,12 +152,12 @@ function quitarProducto2() {
 function compraProducto3() {
   carrito.push(producto3);
   Swal.fire({
-    title:"Producto agregado",
-    text:"NECKLACE IN ROSE GOLD",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto agregado",
+    text: "NECKLACE IN ROSE GOLD",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -146,25 +166,25 @@ function quitarProducto3() {
   let producto3Posicion = carrito.indexOf(producto3);
   carrito.splice(producto3Posicion, 1);
   Swal.fire({
-    title:"Producto eliminado",
-    text:"NECKLACE IN ROSE GOLD",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto eliminado",
+    text: "NECKLACE IN ROSE GOLD",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
 
 function compraProducto4() {
-  carrito.push(producto4);  
-    Swal.fire({
-    title:"Producto agregado",
-    text:"DIAMOND SPIKE ONE BRACELET",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+  carrito.push(producto4);
+  Swal.fire({
+    title: "Producto agregado",
+    text: "DIAMOND SPIKE ONE BRACELET",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -173,11 +193,11 @@ function quitarProducto4() {
   let producto4Posicion = carrito.indexOf(producto4);
   carrito.splice(producto4Posicion, 1);
   Swal.fire({
-    title:"Producto eliminado",
-    text:"DIAMOND SPIKE ONE BRACELET",
-    icon:"success",
-    confirmButtonText:"aceptar",
-  }) 
+    title: "Producto eliminado",
+    text: "DIAMOND SPIKE ONE BRACELET",
+    icon: "success",
+    confirmButtonText: "aceptar",
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -185,12 +205,12 @@ function quitarProducto4() {
 function compraProducto5() {
   carrito.push(producto5);
   Swal.fire({
-    title:"Producto agregado",
-    text:"NECKLACE IN WHITE GOLD FULL",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto agregado",
+    text: "NECKLACE IN WHITE GOLD FULL",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   muestraCarrito();
   quitarProducto();
 }
@@ -199,12 +219,12 @@ function quitarProducto5() {
   let producto5Posicion = carrito.indexOf(producto5);
   carrito.splice(producto5Posicion, 1);
   Swal.fire({
-    title:"Producto eliminado",
-    text:"NECKLACE IN WHITE GOLD FULL",
-    icon:"success",
-    confirmButtonText:"aceptar"
-   
-  }) 
+    title: "Producto eliminado",
+    text: "NECKLACE IN WHITE GOLD FULL",
+    icon: "success",
+    confirmButtonText: "aceptar"
+
+  })
   console.log(carrito);
   muestraCarrito();
   quitarProducto();
@@ -254,7 +274,7 @@ const producto1 = new Productos(
 );
 
 //Desestructuracion 
-const {nombre,descripcion,precio} = producto1
+const { nombre, descripcion, precio } = producto1
 console.log(nombre)
 
 const producto2 = new Productos(
